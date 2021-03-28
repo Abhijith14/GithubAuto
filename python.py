@@ -134,6 +134,7 @@ def ConnectDB():
 
     t = tuple(ID_Stat)
 
+    SQL = "SELECT * FROM elabdata"
     SQL = "SELECT * FROM elabdata WHERE id NOT IN {} ORDER BY ID ASC".format(t)
 
     mycursor.execute(SQL)
