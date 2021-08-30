@@ -13,7 +13,7 @@ ID_Stat = []#df1['ID'].values.tolist()
 Calendar = []#df1['Date'].values.tolist()
 # Name_Stat = df1['Name'].values.tolist()
 
-GITTOKEN = "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"
+GITTOKEN = "ACCESS_TOKEN"
 
 
 
@@ -21,10 +21,10 @@ def showStatDB():
     global ID_Stat, Calendar
 
     mydb2 = psycopg2.connect(
-        host="ec2-54-157-149-88.compute-1.amazonaws.com",
-        database="d2mmkp0vvmbd9v",
-        user="yhxafiioidwbcx",
-        password="30d69912fdb062c9d0808bdd98bcd4ed933de736671f569cbe7f4a7cac866999"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
     mycursor2 = mydb2.cursor()
@@ -43,10 +43,10 @@ def showStatDB():
 def saveStatDB(ID, DATE_STAT, QNAME):
 
     mydb2 = psycopg2.connect(
-        host="ec2-54-157-149-88.compute-1.amazonaws.com",
-        database="d2mmkp0vvmbd9v",
-        user="yhxafiioidwbcx",
-        password="30d69912fdb062c9d0808bdd98bcd4ed933de736671f569cbe7f4a7cac866999"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
     mycursor2 = mydb2.cursor()
@@ -102,10 +102,10 @@ def ConnectDB():
     showStatDB()
 
     mydb = psycopg2.connect(
-        host="ec2-23-20-70-32.compute-1.amazonaws.com",
-        database="davups0o4matv3",
-        user="qdolfiocvnulss",
-        password="bd798a618db89d9025f68f795b68a20f87ae9e3a012cd4004369d6daa91299dd"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
     mycursor = mydb.cursor()

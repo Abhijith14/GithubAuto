@@ -14,15 +14,15 @@ Calendar = []#df1['Date'].values.tolist()
 # Name_Stat = df1['Name'].values.tolist()
 
 
-GITTOKEN = "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"
+GITTOKEN = "ACCESS_TOKEN"
 
 
 def clearStatDB():
     mydb2 = psycopg2.connect(
-        host="ec2-54-157-149-88.compute-1.amazonaws.com",
-        database="d1al5qu3fk94o2",
-        user="dxtmfclvrubami",
-        password="9a0516997d911df760d45f923aed3c56d6d52d5edd7c6454e4c8b297f62260c2"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
     mycursor2 = mydb2.cursor()
@@ -36,10 +36,10 @@ def showStatDB():
     global ID_Stat, Calendar
 
     mydb2 = psycopg2.connect(
-        host="ec2-54-157-149-88.compute-1.amazonaws.com",
-        database="d1al5qu3fk94o2",
-        user="dxtmfclvrubami",
-        password="9a0516997d911df760d45f923aed3c56d6d52d5edd7c6454e4c8b297f62260c2"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
     mycursor2 = mydb2.cursor()
@@ -60,10 +60,10 @@ def showStatDB():
 def saveStatDB(ID, DATE_STAT, QNAME):
 
     mydb2 = psycopg2.connect(
-        host="ec2-54-157-149-88.compute-1.amazonaws.com",
-        database="d1al5qu3fk94o2",
-        user="dxtmfclvrubami",
-        password="9a0516997d911df760d45f923aed3c56d6d52d5edd7c6454e4c8b297f62260c2"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
     mycursor2 = mydb2.cursor()
@@ -137,19 +137,12 @@ def ConnectDB():
     showStatDB()
 
     mydb = psycopg2.connect(
-        host="ec2-3-213-106-122.compute-1.amazonaws.com",
-        database="d7rc9lm7b37de6",
-        user="hhulltyqpmtyfo",
-        password="1b6bdcf5e8b5193b8827a68b81fe8a3b7ba6c21b310c247f049da7a4870e5a92"
+         host="HOST",
+        database="DATABASE",
+        user="USER",
+        password="PASSWORD"
     )
 
-    # mydb = psycopg2.connect(
-    #     host="ec2-52-0-114-209.compute-1.amazonaws.com",
-    #     database="d73alph0qjhckg",
-    #     user="thwovgcyzjejjq",
-    #     password="028d9acc55577646f5cd7921ef1a5a5c6b652ad213c8ff4e2ae86fa1ee29e106",
-    #     sslmode='require'
-    # )
 
     mycursor = mydb.cursor()
 
